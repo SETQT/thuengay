@@ -1,0 +1,150 @@
+.container {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+.backLink {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.mainContent {
+    min-width: 0;
+    /* Prevent overflow */
+}
+
+.sidebar {
+    min-width: 0;
+}
+
+.stickyCard {
+    position: sticky;
+    top: 100px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.jobHeader {
+    margin-bottom: 2rem;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.meta {
+    display: flex;
+    gap: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.salaryBox {
+    background: #ECFDF5;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.sectionTitle {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.description {
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: var(--text-secondary);
+}
+
+.list {
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+    color: var(--text-secondary);
+}
+
+.listItem {
+    margin-bottom: 0.5rem;
+}
+
+.ownerInfo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.ownerAvatar {
+    width: 50px;
+    height: 50px;
+    background: #F3F4F6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.trustBadge {
+    padding: 1rem;
+    background: #F9FAFB;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.mobileApplyBar {
+    display: none;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .stickyCard {
+        position: static;
+    }
+
+    .mobileApplyBar {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 1rem;
+        border-top: 1px solid var(--border);
+        z-index: 100;
+        box-shadow: 0 -4px 6px -1px rgb(0 0 0 / 0.1);
+    }
+
+    .container {
+        padding-bottom: 6rem;
+    }
+
+    /* Hide desktop apply button on mobile */
+    :global(.desktop-only) {
+        display: none;
+    }
+}

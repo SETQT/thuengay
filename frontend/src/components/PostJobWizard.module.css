@@ -1,0 +1,91 @@
+.wizard {
+    background: white;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+    padding: 2rem;
+    border: 1px solid var(--border);
+}
+
+.progress {
+    height: 6px;
+    background: var(--border);
+    border-radius: 3px;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.progressBar {
+    height: 100%;
+    background: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.stepTitle {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.optionBtn {
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: white;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+.optionBtn:hover,
+.optionBtn.active {
+    border-color: var(--primary);
+    background: #ECFDF5;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.formGroup {
+    margin-bottom: 1.5rem;
+}
+
+.label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.input,
+.textarea,
+.select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+}
+
+.checkboxGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.checkboxLabel {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+}
